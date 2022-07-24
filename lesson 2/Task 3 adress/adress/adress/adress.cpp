@@ -11,14 +11,14 @@ struct adress
 
 };
 
-void print_adress (adress* data )
+void print_adress (adress& data )
 {
     std::cout << std::endl << "Ваш адресс: " << std::endl;
-    std::cout << "Город: " << data->city << std::endl;
-    std::cout << "Улица: " << data->street << std::endl;
-    std::cout << "Номер дома: " << data->home_number << std::endl;
-    std::cout << "Номер квартиры: " << data->flat_number << std::endl;
-    std::cout << "Индекс: " << data->index << std::endl;
+    std::cout << "Город: " << data.city << std::endl;
+    std::cout << "Улица: " << data.street << std::endl;
+    std::cout << "Номер дома: " << data.home_number << std::endl;
+    std::cout << "Номер квартиры: " << data.flat_number << std::endl;
+    std::cout << "Индекс: " << data.index << std::endl;
 }
 int main()
 {
@@ -39,7 +39,7 @@ int main()
     std::cin >> data.index;
 
 
-    print_adress (&data);
+    print_adress (data);
 
     
     return 0;
